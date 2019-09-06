@@ -120,7 +120,7 @@ class InstagramBot:
             self.driver.find_element_by_xpath('/html/body/div[2]/div/div/div[3]/button[2]').click()
         except:
             pass
-bot = InstagramBot("boyd.kirkman","GoodLuckM9@CrackingThis101")
+bot = InstagramBot("username","password")
 def checkWin(b,m): #b is the board, and m is the marker
     return((b[1] == m and b[2] == m and b[3] == m) or
            (b[4] == m and b[5] == m and b[6] == m) or
@@ -194,7 +194,7 @@ def game_compute():
             bot.says = "It's a tie\ncomment your next move to play again"
             board = [" "] * 10
     bot.get_photo()
-    bot.post()  
+    bot.post()
     if kbye == True:
         quit()
     else:
