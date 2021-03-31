@@ -7,9 +7,11 @@ import urllib.request
 board = [" "] * 10
 class InstagramBot:
     def __init__(self, username, password):
+        #set the username and password
         self.username = username
         self.password = password
         self.base_url = "https://www.instagram.com"
+        #Emulate a mobile version so as to enable posting capabilities
         self.mobile_emulation = { "deviceName": "Nexus 5" }
         self.chrome_options = webdriver.ChromeOptions()
         self.chrome_options.add_experimental_option("mobileEmulation", self.mobile_emulation)
